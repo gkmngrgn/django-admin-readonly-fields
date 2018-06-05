@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'admin_readonly_fields'
+    'admin_readonly_fields',
+    'example'
 ]
 
 MIDDLEWARE = [
