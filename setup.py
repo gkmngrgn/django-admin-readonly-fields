@@ -28,5 +28,10 @@ setup(
     },
     include_package_data=True,
     zip_safe=False,
-    install_requires=[]
+    install_requires=[
+        'Pygments>=2.2.0'
+    ],
+    extra_require={
+        'markdown': 'Markdown>=2.6.10'
+    },
 )
