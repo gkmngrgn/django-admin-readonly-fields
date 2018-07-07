@@ -19,7 +19,7 @@ class ReadOnlyField(models.TextField):
         defaults = kwargs
         if self.widget is not None:
             defaults['widget'] = self.widget
-        super(ReadOnlyField, self).formfield(**defaults)
+        return super(ReadOnlyField, self).formfield(**defaults)
 
 
 class ReadOnlyJsonField(ReadOnlyField):

@@ -1,6 +1,7 @@
 import json
 
 from django.forms import fields
+from django.template.loader import render_to_string
 from django.utils.safestring import mark_safe
 from pygments import highlight
 from pygments.formatters.html import HtmlFormatter
@@ -18,14 +19,23 @@ __all__ = [
 ]
 
 
-class ReadOnlyJsonInput(fields.TextInput):
-    def render(self, name, value, **kwargs):
-        formatter = HtmlFormatter(style='colorful', noclasses=True)
-        response = json.dumps(value, sort_keys=True, indent=4, ensure_ascii=False)
-        response = highlight(response, JsonLexer(), formatter)
-        return mark_safe('<br/>{}'.format(response))
+class ReadOnlyInput(fields.TextInput):
+    class Media:
+        css = {
+            'all': ('admin_readonly_fields/admin.css',)
+        }
+        js = ('admin_readonly_fields/admin.js',)
 
 
-class ReadOnlyMarkdownInput(fields.TextInput):
+class ReadOnlyJsonInput(ReadOnlyInput):
     def render(self, name, value, **kwargs):
-        return mark_safe('<br/>{}'.format(markdown(value)))
+        formatter = HtmlFormatter(style='colorful', noclasses=True, linenos='table')
+        result = json.dumps(json.loads(value), sort_keys=True, indent=4, ensure_ascii=False)
+        result = highlight(result, JsonLexer(), formatter)
+        return render_to_string('admin_readonly_fields/json.html', {'value': result})
+
+
+class ReadOnlyMarkdownInput(ReadOnlyInput):
+    def render(self, name, value, **kwargs):
+        result = mark_safe('<br/>{}'.format(markdown(value)))
+        return render_to_string('admin_readonly_fields/md.html', {'value': result})
