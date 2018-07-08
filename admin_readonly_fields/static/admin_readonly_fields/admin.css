@@ -1,3 +1,328 @@
+/* Pygments default styles */
+.admin_readonly_fields .hll {
+    background-color: #ffffcc
+}
+
+.admin_readonly_fields .c {
+    color: #408080;
+    font-style: italic
+}
+
+.admin_readonly_fields .err {
+    border: 1px solid #FF0000
+}
+
+.admin_readonly_fields .k {
+    color: #008000;
+    font-weight: bold
+}
+
+.admin_readonly_fields .o {
+    color: #666666
+}
+
+.admin_readonly_fields .ch {
+    color: #408080;
+    font-style: italic
+}
+
+.admin_readonly_fields .cm {
+    color: #408080;
+    font-style: italic
+}
+
+.admin_readonly_fields .cp {
+    color: #BC7A00
+}
+
+.admin_readonly_fields .cpf {
+    color: #408080;
+    font-style: italic
+}
+
+.admin_readonly_fields .c1 {
+    color: #408080;
+    font-style: italic
+}
+
+.admin_readonly_fields .cs {
+    color: #408080;
+    font-style: italic
+}
+
+.admin_readonly_fields .gd {
+    color: #A00000
+}
+
+.admin_readonly_fields .ge {
+    font-style: italic
+}
+
+.admin_readonly_fields .gr {
+    color: #FF0000
+}
+
+.admin_readonly_fields .gh {
+    color: #000080;
+    font-weight: bold
+}
+
+.admin_readonly_fields .gi {
+    color: #00A000
+}
+
+.admin_readonly_fields .go {
+    color: #888888
+}
+
+.admin_readonly_fields .gp {
+    color: #000080;
+    font-weight: bold
+}
+
+.admin_readonly_fields .gs {
+    font-weight: bold
+}
+
+.admin_readonly_fields .gu {
+    color: #800080;
+    font-weight: bold
+}
+
+.admin_readonly_fields .gt {
+    color: #0044DD
+}
+
+.admin_readonly_fields .kc {
+    color: #008000;
+    font-weight: bold
+}
+
+.admin_readonly_fields .kd {
+    color: #008000;
+    font-weight: bold
+}
+
+.admin_readonly_fields .kn {
+    color: #008000;
+    font-weight: bold
+}
+
+.admin_readonly_fields .kp {
+    color: #008000
+}
+
+.admin_readonly_fields .kr {
+    color: #008000;
+    font-weight: bold
+}
+
+.admin_readonly_fields .kt {
+    color: #B00040
+}
+
+.admin_readonly_fields .m {
+    color: #666666
+}
+
+.admin_readonly_fields .s {
+    color: #BA2121
+}
+
+.admin_readonly_fields .na {
+    color: #7D9029
+}
+
+.admin_readonly_fields .nb {
+    color: #008000
+}
+
+.admin_readonly_fields .nc {
+    color: #0000FF;
+    font-weight: bold
+}
+
+.admin_readonly_fields .no {
+    color: #880000
+}
+
+.admin_readonly_fields .nd {
+    color: #AA22FF
+}
+
+.admin_readonly_fields .ni {
+    color: #999999;
+    font-weight: bold
+}
+
+.admin_readonly_fields .ne {
+    color: #D2413A;
+    font-weight: bold
+}
+
+.admin_readonly_fields .nf {
+    color: #0000FF
+}
+
+.admin_readonly_fields .nl {
+    color: #A0A000
+}
+
+.admin_readonly_fields .nn {
+    color: #0000FF;
+    font-weight: bold
+}
+
+.admin_readonly_fields .nt {
+    color: #008000;
+    font-weight: bold
+}
+
+.admin_readonly_fields .nv {
+    color: #19177C
+}
+
+.admin_readonly_fields .ow {
+    color: #AA22FF;
+    font-weight: bold
+}
+
+.admin_readonly_fields .w {
+    color: #bbbbbb
+}
+
+.admin_readonly_fields .mb {
+    color: #666666
+}
+
+.admin_readonly_fields .mf {
+    color: #666666
+}
+
+.admin_readonly_fields .mh {
+    color: #666666
+}
+
+.admin_readonly_fields .mi {
+    color: #666666
+}
+
+.admin_readonly_fields .mo {
+    color: #666666
+}
+
+.admin_readonly_fields .sa {
+    color: #BA2121
+}
+
+.admin_readonly_fields .sb {
+    color: #BA2121
+}
+
+.admin_readonly_fields .sc {
+    color: #BA2121
+}
+
+.admin_readonly_fields .dl {
+    color: #BA2121
+}
+
+.admin_readonly_fields .sd {
+    color: #BA2121;
+    font-style: italic
+}
+
+.admin_readonly_fields .s2 {
+    color: #BA2121
+}
+
+.admin_readonly_fields .se {
+    color: #BB6622;
+    font-weight: bold
+}
+
+.admin_readonly_fields .sh {
+    color: #BA2121
+}
+
+.admin_readonly_fields .si {
+    color: #BB6688;
+    font-weight: bold
+}
+
+.admin_readonly_fields .sx {
+    color: #008000
+}
+
+.admin_readonly_fields .sr {
+    color: #BB6688
+}
+
+.admin_readonly_fields .s1 {
+    color: #BA2121
+}
+
+.admin_readonly_fields .ss {
+    color: #19177C
+}
+
+.admin_readonly_fields .bp {
+    color: #008000
+}
+
+.admin_readonly_fields .fm {
+    color: #0000FF
+}
+
+.admin_readonly_fields .vc {
+    color: #19177C
+}
+
+.admin_readonly_fields .vg {
+    color: #19177C
+}
+
+.admin_readonly_fields .vi {
+    color: #19177C
+}
+
+.admin_readonly_fields .vm {
+    color: #19177C
+}
+
+.admin_readonly_fields .il {
+    color: #666666
+}
+
+/* Project specific styles */
 .admin_readonly_fields {
     clear: both;
+    display: block;
+}
+
+.admin_readonly_fields table {
+    width: 100%;
+}
+
+.admin_readonly_fields pre {
+    margin: 0;
+    padding: 10px;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 1rem;
+    line-height: 1.2rem;
+    background-color: #f8f8f8;
+}
+
+.admin_readonly_fields td.code,
+.admin_readonly_fields td.linenos {
+    border-bottom: none;
+    padding: 0;
+}
+
+.admin_readonly_fields.admin_readonly_fields-json {
+
+}
+
+.admin_readonly_fields.admin_readonly_fields-md {
+
 }

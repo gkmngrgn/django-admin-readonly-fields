@@ -2,10 +2,10 @@ import json
 
 from django.forms import fields
 from django.template.loader import render_to_string
-from django.utils.safestring import mark_safe
 from pygments import highlight
 from pygments.formatters.html import HtmlFormatter
 from pygments.lexers.data import JsonLexer
+from pygments.lexers.markup import MarkdownLexer
 
 try:
     from markdown import markdown
@@ -29,7 +29,7 @@ class ReadOnlyInput(fields.TextInput):
 
 class ReadOnlyJsonInput(ReadOnlyInput):
     def render(self, name, value, **kwargs):
-        formatter = HtmlFormatter(style='colorful', noclasses=True, linenos='table')
+        formatter = HtmlFormatter(linenos='table')
         result = json.dumps(json.loads(value), sort_keys=True, indent=4, ensure_ascii=False)
         result = highlight(result, JsonLexer(), formatter)
         return render_to_string('admin_readonly_fields/json.html', {'value': result})
@@ -37,5 +37,6 @@ class ReadOnlyJsonInput(ReadOnlyInput):
 
 class ReadOnlyMarkdownInput(ReadOnlyInput):
     def render(self, name, value, **kwargs):
-        result = mark_safe('<br/>{}'.format(markdown(value)))
+        formatter = HtmlFormatter()
+        result = highlight(value, MarkdownLexer(), formatter)
         return render_to_string('admin_readonly_fields/md.html', {'value': result})
